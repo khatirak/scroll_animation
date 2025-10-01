@@ -1,12 +1,15 @@
-window.addEventListener('scroll', () => {
+let saturnVisible = false;
+
+// Add click event listener to trigger Saturn animation
+document.addEventListener('click', () => {
 	const saturn = document.getElementById('saturn');
-	const scrollPos = window.scrollY;
-	const windowHeight = window.innerHeight;
 	
-	// Section 1 -> Section 2: Saturn rises
-	if (scrollPos > windowHeight * 0.5) {
-	  saturn.style.bottom = '50px';
+	// Toggle Saturn visibility on each click
+	if (saturnVisible) {
+		saturn.style.bottom = '-400px';
+		saturnVisible = false;
 	} else {
-	  saturn.style.bottom = '-400px';
+		saturn.style.bottom = '50px';
+		saturnVisible = true;
 	}
-  });
+});

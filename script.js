@@ -1,16 +1,15 @@
 let saturnVisible = false;
 
-// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
 	const saturn = document.getElementById('saturn');
 	
-	// Ensure Saturn starts hidden
+	//  Saturn starts hidden
 	saturn.style.bottom = '-400px';
 	saturnVisible = false;
 	
-	// Add click event listener to trigger Saturn animation
+// trigger the animation when the user clicks on the page
 	document.addEventListener('click', () => {
-		// Toggle Saturn visibility on each click
+		// toggle Saturn visibility on each click
 		if (saturnVisible) {
 			saturn.style.bottom = '-400px';
 			saturnVisible = false;
